@@ -7,11 +7,11 @@ public class Job {
     private int id;
     private static int nextId = 1;
 
-    private String name;
-    private Employer employer;
-    private Location location;
-    private PositionType positionType;
-    private CoreCompetency coreCompetency;
+    private static String name;
+    private static Employer employer;
+    private static Location location;
+    private static PositionType positionType;
+    private static CoreCompetency coreCompetency;
 
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
@@ -55,7 +55,7 @@ public class Job {
         return id;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
@@ -63,7 +63,7 @@ public class Job {
         this.name = name;
     }
 
-    public Employer getEmployer() {
+    public static Employer getEmployer() {
         return employer;
     }
 
@@ -71,7 +71,7 @@ public class Job {
         this.employer = employer;
     }
 
-    public Location getLocation() {
+    public static Location getLocation() {
         return location;
     }
 
@@ -79,7 +79,7 @@ public class Job {
         this.location = location;
     }
 
-    public PositionType getPositionType() {
+    public static PositionType getPositionType() {
         return positionType;
     }
 
@@ -87,7 +87,7 @@ public class Job {
         this.positionType = positionType;
     }
 
-    public CoreCompetency getCoreCompetency() {
+    public static CoreCompetency getCoreCompetency() {
         return coreCompetency;
     }
 
