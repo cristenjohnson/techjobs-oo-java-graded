@@ -1,5 +1,7 @@
 package org.launchcode.techjobs.oo;
 
+import org.launchcode.techjobs.oo.test.JobTest;
+
 import java.util.Objects;
 
 public class Job {
@@ -27,6 +29,7 @@ public class Job {
         this.location = location;
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
+
     }
 
 
@@ -95,5 +98,9 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+public String toString(){
+        Job job2 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
+        return id +": " +"\n"+name +": " +"\n"+employer +": " +"\n"+location +": " +"\n"+positionType +": " +"\n"+coreCompetency +": " ;
+}
 
 }
