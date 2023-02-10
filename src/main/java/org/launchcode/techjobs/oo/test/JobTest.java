@@ -77,8 +77,10 @@ public class JobTest extends Job {
         // Position Type: Front-end developer
         // Core Competency: JavaScript
         Job job2 = new Job("", new Employer(""), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
-        if (job2.equals(0)) {
+        if (job2.equals("")) {
             System.out.println("Data not available");
+        } else {
+            System.out.println(getId() +": " +"\n"+getName() +": " +"\n"+getEmployer() +": " +"\n"+getLocation() +": " +"\n"+getPositionType() +": " +"\n"+getCoreCompetency() +": " );
         }
         //all labels need to still be there and values do as well
         //same set up as test above and
