@@ -22,6 +22,7 @@ public class Job {
         id = nextId;
         nextId++;
     }
+
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
         this.name = name;
@@ -31,7 +32,6 @@ public class Job {
         this.coreCompetency = coreCompetency;
 
     }
-
 
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
@@ -98,9 +98,31 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
-public String toString(){
-        Job job2 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
-        return id +": " +"\n"+name +": " +"\n"+employer +": " +"\n"+location +": " +"\n"+positionType +": " +"\n"+coreCompetency +": " ;
-}
+    public String toString() {
+        if(name.isEmpty()){
+            setName("Data not available");
+        }
+        if(employer.getValue().isEmpty()){
+            employer.setValue("Data not available");
+        }
+        if(location.getValue().isEmpty()){
+            location.setValue("Data not available");
+        }
+        if(positionType.getValue().isEmpty()){
+            positionType.setValue("Data not available");
+        }
+        if(coreCompetency.getValue().isEmpty()){
+            coreCompetency.setValue("Data not available");
+        }
+        return "ID: "+ id +
+                "\n"+ "Name: "+ name +
+                "\n"+ "Employer: " + employer +
+                "\n"+ "Location: " + location +
+                "\n"+ "Position Type: " + positionType +
+                "\n"+ "Core Competency: " + coreCompetency;
+    }
 
+//if (dataOne.getId() == (dataTwo.getId())) {
+//        System.out.println(dataOne.getId() + "equals " + dataTwo.getId());
+//    } else System.out.println("Not equal");
 }
